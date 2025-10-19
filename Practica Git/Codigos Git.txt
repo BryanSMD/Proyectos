@@ -1,0 +1,45 @@
+git -- version -> muestra la version de git instalada
+cd .. -> retrocede a una ubicación anterior a la que estamos
+cd <ruta> avanzamos hacia la ubicación que escribimos
+ejemplo: cd C:, cd Bryan, cd Proyectos
+git init -> inicializa git en la ruta donde estamos
+git config --global user.name "<nombre_usuario>" -> introducimos nuestro usuario para los registros (obligatorio)
+ejemplo: git config --global user.name "BryanSMD"
+git config --global user.email "<correo>" -> introducimos nuestro email para los registros (obligatorio)
+ejemplo: git config --global user.name "brystmardel@hotmail.com"
+ls -> muestra los archivos que haya en la ubicación en la que nos encontramos
+ls -a -> muestra los archivos que haya en la ubicación en la que nos encontramos, hasta los archivos ocultos
+clear -> limpia la pantalla de comandos de la terminal
+git config --list -> muestra todas las configuraciones que hay implementadas en git
+git config --global --list -> muestra las configuraciones globales que hay implementadas en git
+git config --global core.editor "code --wait" -> configuración global que ejecuta VSC al realizar un commit sin mensaje (obligatorio guardar el mensaje)
+git config --global color.ui -> configuración global que muestra de forma mas llamativa los colores de los códigos de git
+git config --global core.autocrlf true -> configuración global que autogestiona los saltos de linea al trabajar con windows
+git add .. -> manda al estado de preparación todos los archivos que tengan cambios (no recomendable usarlo)
+git add <nombre_archivo.extencion> -> manda al estado de preparación el archivo que nosotros indicamos si esta modificado
+ejemplo: git add practica.txt 
+para subir mas de 1 archivo de con un mismo add, se debe colocar <espacio>+<nombre_archivo.extencion>
+ejemplo: git add practica.txt archivo.txt yo.txt
+git rm --cached <nombre_archivo.extencion> -> sacamos/eliminamos del area de preparación el archivo que elegimos
+ejemplo: git rm --cached practica.txt
+para eliminar mas de 1 archivo de con un mismo rm, se debe colocar <espacio>+<nombre_archivo.extencion>
+ejemplo: git rm --cached practica.txt archivo.txt yo.txt
+git status -> muestra el estados de los archivos (modificado, eliminado, nuevo) y si estan o no preparados para subir
+git status -s -> muestra el estados de los archivos (modificado, eliminado, nuevo) y si estan o no preparados para subir pero de forma mas resumida
+git commit -> sube los archivos preparados al repositorio git local
+git commit -m "<mensaje>"-> sube los archivos preparados al repositorio git local con un mensaje corto del cambio realizado
+ejemplo: git commit -m "cambio en el archivo practica.txt"
+mkdir <nombre_carpeta> -> crea una carpeta en donde nos encontramos
+ejemplo: mkdir repo
+rmdir <nombre_carpeta> -> elimina la carpeta que elegimos en donde nos encontramos
+ejemplo: rmdir repo
+rm <nombre_archivo.extencion> -> elimina el archivo que ingresamos
+ejemplo: rm practica.txt
+git restore <nombre_archivo.extencion> -> restaura un archivo eliminado que se encontraba subido al area de preparacion
+ejemplo: git restore practica.txt
+git checkout <nombre_archivo.extencion> -> vuelve atras el archivos hasta la version guardada del ultimo commit (solo funciona si el archivo no esta en el area de preparacion)
+ejemplo: git checkout practica.txt
+git reset -> devuelve los cambios de los archivos en preparacion hasta la version guardada del ultimo commit
+git reset --hard -> se fuerza a devolver los cambios de los archivos en preparacion hasta la version guardada del ultimo commit
+git mv <nombre_archivo.extencion> <nuevo_nombre_archivo.extencion> -> cambia el nombre de un archivo
+ejemplo: git mv practica.txt archivo.txt
