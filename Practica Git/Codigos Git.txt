@@ -69,3 +69,6 @@ git branch -d <nombre_rama> --> eliminamos la rama que hayamos seleccionado IMPO
 git branch -m <nuevo_nombre_rama> --> cambia el nombre de la rama en la que nos encontramos
 git branch -m <nombre_rama> <nuevo_nombre_rama> --> cambia el nombre de una rama (siempre y cuando no estemos en esa rama)
 git merge <nombre_rama> --> fusiona los cambios hecho en la otra rama, a la rama que estamos actualmente
+git ls-tree -r --name-only <hash/id> --> muestra los nombres de los archivos cargados en el commit seleccionado
+ejemplo: git ls-tree -r --name-only af07bd0da2
+(OJO, para ignorar archivos e impedir que se vayan al area de preparación y posterior al commit, crear un archivo .gitingnore y dentro implementar las reglas o archivos que van a ser ignorados)
