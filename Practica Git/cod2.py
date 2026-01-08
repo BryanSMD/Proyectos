@@ -1,2 +1,3 @@
-nombre = 'Mey'
-print(nombre)
+nombre = 'Gema'
+apellido = 'Giler'
+print(nombre + ' ' + apellido)
