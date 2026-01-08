@@ -43,3 +43,6 @@ git reset -> devuelve los cambios de los archivos en preparacion hasta la versio
 git reset --hard -> se fuerza a devolver los cambios de los archivos en preparacion hasta la version guardada del ultimo commit
 git mv <nombre_archivo.extencion> <nuevo_nombre_archivo.extencion> -> cambia el nombre de un archivo
 ejemplo: git mv practica.txt archivo.txt
+git show <nombre_archivo.extencion> --> nos muestra el detalle del archivo, pero de lo que esta en el commit mas no los datos o cambios hechos en el area de preparación o del area de trabajo
+ejemplo: git show practica.txt
+git diff --staged --> muestra la diferencia en
