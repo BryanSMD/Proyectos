@@ -45,4 +45,27 @@ git mv <nombre_archivo.extencion> <nuevo_nombre_archivo.extencion> -> cambia el 
 ejemplo: git mv practica.txt archivo.txt
 git show <nombre_archivo.extencion> --> nos muestra el detalle del archivo, pero de lo que esta en el commit mas no los datos o cambios hechos en el area de preparación o del area de trabajo
 ejemplo: git show practica.txt
-git diff --staged --> muestra la diferencia en
+git diff --staged --> muestra la diferencia entre lo que esta en area de preparación y lo que esta en el commit
+git log --> nos muestra el hash o id de los commit, quien los realizo, cuando los realizo y el mensaje ingresado
+git log --oneline --> muestra información de los commit mas resumida, hash o id y el mensaje (ahora solo muestra los primeros 7 caracteres del id por defecto)
+git config --global core.abbrev <numero> --> cambia la configuración global de cuentos dígitos del id se visualizan con el log --oneline
+ejemplo: git config --global core.abbrev 10
+git diff <hash/id> <hash/id> --> muestra las diferencias entre los archivos subidos en los commits
+ejemplo: git diff af07bd0da2 e89b94e5f9
+git diff --name-only <hash/id> <hash/id> --> muestra únicamente el nombre de los archivos que presentan diferencias entre los commits
+ejemplo: git diff --word-diff af07bd0da2 e89b94e5f9
+git diff --word-diff <hash/id> <hash/id> --> muestra linea por linea los diferentes cambios entre commits (rojo = nuevo, verde = anterior)
+ejemplo: git diff --word-diff af07bd0da2 d8a421b43f
+git commit --amend --> carga el ultimo commit y podemos modificar lo que esta subido (nos muestra la terminal para poder cambiar el texto del commit y si previo al --amend hemos cargado archivos al area de preparación con git add, carga todos estos cambios al commit)
+git reset --soft <hash/id> --> posiciona el head sobre el commit perteneciente a la hash/id que ingresamos y aquellos commit 'borrados' los coloca al area de preparación
+git reset --soft head~<numero> --> otra forma de posicionar el head, en donde el valor del numero indica cuantos commits atrás se va a desplazar el head
+ejemplo: git reset --soft head~2 (va a retroceder 2 commits de donde se encuentre el head)
+git branch --> muestra todas las ramas creadas
+git branch <nombre_rama> --> crea una nueva rama con el nombre que le coloquemos (es de uso común colocarlo en minúsculas y en caso de varias palabras colocar un guion medio entre palabras)
+git checkout <nombre_rama> --> se posiciona en la rama seleccionada para trabajar
+git switch <nombre_rama> --> otra forma de cambiarse de ramas y la mas recomendable
+git switch -c <nombre_rama> --> crea una nueva rama y no posiciona inmediatamente en ella
+git branch -d <nombre_rama> --> eliminamos la rama que hayamos seleccionado IMPORTANTE: antes de eliminar una rama debemos estar en otra rama
+git branch -m <nuevo_nombre_rama> --> cambia el nombre de la rama en la que nos encontramos
+git branch -m <nombre_rama> <nuevo_nombre_rama> --> cambia el nombre de una rama (siempre y cuando no estemos en esa rama)
+git merge <nombre_rama> --> fusiona los cambios hecho en la otra rama, a la rama que estamos actualmente
