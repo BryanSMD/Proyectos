@@ -71,4 +71,24 @@ git branch -m <nombre_rama> <nuevo_nombre_rama> --> cambia el nombre de una rama
 git merge <nombre_rama> --> fusiona los cambios hecho en la otra rama, a la rama que estamos actualmente
 git ls-tree -r --name-only <hash/id> --> muestra los nombres de los archivos cargados en el commit seleccionado
 ejemplo: git ls-tree -r --name-only af07bd0da2
-(OJO, para ignorar archivos e impedir que se vayan al area de preparación y posterior al commit, crear un archivo .gitingnore y dentro implementar las reglas o archivos que van a ser ignorados)
+(OJO, para ignorar archivos e impedir que se vayan al area de preparación y posterior al commit, crear un archivo .gitignore y dentro implementar las reglas o archivos que van a ser ignorados
+para ignorar uno en especifico colocar el nombre ejemplo: practica.txt
+para ignorar todos los archivos con una misma extencion escribir la etencion previo con un * ejemplo *.txt
+para que no ignore un archivo colocarle ! ejemplo: !Codigos Git.txt (se subirá aunque tengamos la otra regla de ignorar todos los .txt)
+para ignorar archivos dentro de un directorio colocar / después del directorio ejemplo: Practica Git/)
+(se puede crear un archivo ignore gobal para que cada vez que se comience un proyecto, si el nombre de algún archivo o repositorio coincide con lo que esta en el archivo global, va a ser ignorado
+este se crea, creando un archivo .gitignore_global
+IMPORTANTE: si se crea un .gitignore local (el proyecto en el que estamos trabajando) este tendrá mas prioridad que el global)
+git config --global core.excludesfile <directorio del .gitignore_global> --> configuración para que no importa el proyecto siempre ignore el listado que se encuentra en el archivo .gitignore_global
+ejemplo: git config --global core.excludesfile G:/.gitignore_global
+CREAR ALIAS
+para crear alias de algún comando largo, como por ejemplo:
+git log --oneline --graph --all --pretty=format:'%C(auto)%h%d %s %C(black)%C(bold)%cr' --> visualiza el log de los commit con los caminos que ha tomado cada rama y hace cuanto se hizo cada commit
+se puede optimizar dándole un alias
+git config --global alias.<nombre_alias> "<codigo>"
+ejemplo: git config --global alias.log-mejorado "log --oneline --graph --all --pretty=format:'%C(auto)%h%d %s %C(black)%C(bold)%cr'"
+para usarlo: git log-mejorado
+git reflog --> muestra todo el historial de commits con sus respectivos hash/id, uno de los usos que se le puede dar es conocer el hash/id de un commit que se haya eliminado y no lo recordamos su hash/id
+NOTA: en caso de no poder salir, presionar la q
+git clone <URL_de_HTTP_de_GIT> --> clona/copia los archivos que hay en el repositorio de git (en la nube) a nuestro repositorio local (PC)
+ejemplo: git clone https://github.com/BryanSMD/Proyectos.git
