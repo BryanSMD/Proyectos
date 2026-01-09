@@ -90,5 +90,7 @@ ejemplo: git config --global alias.log-mejorado "log --oneline --graph --all --p
 para usarlo: git log-mejorado
 git reflog --> muestra todo el historial de commits con sus respectivos hash/id, uno de los usos que se le puede dar es conocer el hash/id de un commit que se haya eliminado y no lo recordamos su hash/id
 NOTA: en caso de no poder salir, presionar la q
-git clone <URL_de_HTTP_de_GIT> --> clona/copia los archivos que hay en el repositorio de git (en la nube) a nuestro repositorio local (PC)
+git clone <URL_de_HTTP_de_GIT> --> clona/copia todos los archivos que hay en el repositorio de git (en la nube) a nuestro repositorio local (PC)
 ejemplo: git clone https://github.com/BryanSMD/Proyectos.git
+git pull --> trae cambios que tenga el servidor y los agrega a nuesto repositorio local, haciendo ero un git fech para traer los cambios y luego un git merge para fusionar los cambios con nuestra rama
+IMPORTANTE: al hacer un pull directo no tenemos mucho control de como se van a fusionar las ramas y como consevara ls cambios
