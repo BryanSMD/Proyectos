@@ -1,0 +1,1 @@
+start cmd.exe /k "cd C:\Users\Bryan\Documents\Proyectos\Practica React\Hola-Mundo && npm run dev"
