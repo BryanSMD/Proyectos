@@ -3,9 +3,13 @@ body {
   background-color: #000;
   color: white;
   font-family: system-ui, sans-serif;
+  display: grid;
+  place-content: center;
 }
 
-.like-button {
+
+
+/* .like-button {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -21,4 +25,4 @@ body {
 
 .like-button img {
   width: 20px;
-}
+} */

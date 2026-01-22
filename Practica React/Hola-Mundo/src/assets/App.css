@@ -1,0 +1,83 @@
+.tw-card {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: .8rem;
+    justify-content: space-between;
+}
+
+.tw-card-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.tw-card-div-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.tw-card-span-user {
+    opacity: .6;
+}
+
+.tw-card-img {
+    width: 48px;
+    width: 48px;
+    border-radius: 1000px;
+}
+
+.tw-card-button-is-following, 
+.tw-card-button-not-following {
+    margin-left: 16px;
+    border: 0;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: .3s ease background-color;
+}
+
+.tw-card-button-is-following {
+    border: 1px solid red;
+    opacity: .6;
+    width: 170px;
+}
+
+.tw-card-button-stop-following,
+.tw-card-button-img-dislike{
+    display: none;
+}
+
+.tw-card-button-text,
+.tw-card-button-img-like{
+    display: block;
+}
+
+.tw-card-button-is-following:hover {
+    background-color: #f05050;
+}
+
+.tw-card-button-not-following:hover {
+    background-color: #09f;
+}
+
+.tw-card-button-is-following:hover,
+.tw-card-button-not-following:hover {
+    color: #ffffff;
+}
+
+.tw-card-button-is-following:hover .tw-card-button-stop-following, 
+.tw-card-button-is-following:hover .tw-card-button-img-dislike {
+    display: block;
+}
+
+.tw-card-button-is-following:hover .tw-card-button-text, 
+.tw-card-button-is-following:hover .tw-card-button-img-like {
+    display: none;
+}
