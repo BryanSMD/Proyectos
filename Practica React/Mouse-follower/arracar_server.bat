@@ -1,0 +1,1 @@
+start cmd.exe /k "cd C:\Users\Bryan\Documents\Proyectos\Practica React\mouse-follower && npm run dev"

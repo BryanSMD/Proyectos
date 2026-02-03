@@ -1,0 +1,18 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.pointer-follower {
+  position: absolute;
+  background-color: #09f;
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  left: -20px;
+  top: -20px;
+  width: 50px;
+  height: 50px;
+}
